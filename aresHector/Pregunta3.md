@@ -84,6 +84,16 @@ El método `setNombre` modifica el atributo `nombre` del objeto referenciado por
 
 
 
+-----
+___
+
+
+
+
+![Diagrama UML](https://www.planttext.com/api/plantuml/svg/bP8zJiGm48LFu3iyfG6ABVYf8e5sjRHGS0Cdde2HFHFPZYWG1zgQ8-HYs4js2K4KszbZVs_U6rkjOz8X3TufQLwfJNZGF933km9OV1C8jwY-YrMk6RQbS7brVLEf3tMWjj9RVIhqH1q5ulO4yYn3VQ18d7Hhnq-68JWT4OvQKKqHLaRUU7KtUQkn3QGnC4ht9B1ig2SsDclHafbPg-SRxU1jz3A954Ft5FjXtCNY959wtASuwDL_Kc73ITXAfNxr-F_QFhFBQOKfeXL6FlNZBecHMKEMH0Zs-IL1kkaLym2F5ywNmXSgXqV1r0B-CJONWExoe-KHGFj6uenUvsNvGLy0)
+
+
+
 
 
 
