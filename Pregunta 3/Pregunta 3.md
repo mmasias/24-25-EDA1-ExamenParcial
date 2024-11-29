@@ -39,7 +39,7 @@ b) Si hacemos `manuel.setNombre("Manuel Antonio")`, ¿qué elementos de la lista
 
 ## Respuestas pregunta 3
 
-a) En la memoria hay dos objetos persona diferentes, existe el primer "manuel"...  
+a) Utilizando la implementación B, en la memoria hay dos objetos persona diferentes, existe el primer "manuel"...  
 
 ```
 Persona manuel = new Persona("Manuel", "1234");
