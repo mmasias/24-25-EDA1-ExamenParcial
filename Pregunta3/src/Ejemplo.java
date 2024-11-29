@@ -12,7 +12,7 @@ public class Ejemplo {
         lista.insertarPersona(referencia);
     
 
-        System.out.println("Antes de cambiar el nombre:");
+        System.out.println("\nAntes de cambiar el nombre:");
         System.out.println("manuel: " + manuel.getNombre());
         System.out.println("copia: " + copia.getNombre());
         System.out.println("referencia: " + referencia.getNombre());
@@ -21,10 +21,10 @@ public class Ejemplo {
         manuel.setNombre("Manuel Antonio");
     
 
-        System.out.println("Después de cambiar el nombre:");
+        System.out.println("\nDespués de cambiar el nombre:");
         System.out.println("manuel: " + manuel.getNombre());
         System.out.println("copia: " + copia.getNombre());
-        System.out.println("referencia: " + referencia.getNombre());
+        System.out.println("referencia: " + referencia.getNombre()+ "\n");
     }
     
 }

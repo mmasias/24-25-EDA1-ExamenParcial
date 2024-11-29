@@ -20,5 +20,18 @@ En el código proporcionado, podemos determinar el número de objetos `Persona` 
 ![Diagrama Explicativo](images/RespuestaA.svg)
 ---
 
-## Pregunta (b): Si hacemos `manuel.setNombre("Manuel Antonio")`, ¿qué elementos de la lista se verán afectados? ¿Por qué?
+## Pregunta (b): Si hacemos manuel.setNombre("Manuel Antonio"), ¿qué elementos de la lista se verán afectados? ¿Por qué?
+
+- Como visto en el diagrama anterior, **manuel** y **referencia** son dos referencias al **mismo objeto**, pero **copia** es una referencia a un **objeto diferente** que fue creado copiando los valores de manuel en el momento de su creación.
+
+Asi que, los Objetos Afectados por el Cambio son:  **manuel** y **referencia** 
+
+**Razón**: Al modificar **manuel**, también se modifica **referencia** porque ambas apuntan a la **misma instancia** del objeto Persona. En cambio, **copia** es una copia distinta del objeto original, por lo que sus atributos permanecen igual después del cambio.
+
+
+Aqui está la captura del resultado de la ejecución del código después de cambiar el nombre de `manuel`:
+![Codigo Ejecutado](images/CambioNombre.png)
+
+
+
 
