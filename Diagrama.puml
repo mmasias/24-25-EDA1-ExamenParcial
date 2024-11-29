@@ -1,0 +1,46 @@
+@startuml
+
+class Persona {
+    - String nombre
+    - String dni
+    + Persona(String nombre, String dni)
+    + Persona(Persona persona)
+    + setNombre(String nombre)
+}
+
+class Principal {
+    + main(String[] args)
+}
+
+class Lista {
+    + insertarPersona(Persona persona)
+}
+
+Persona "1" o-- "*" Lista : contiene
+Principal --> Lista : "Usa"
+
+object manuel {
+    nombre = "Manuel"
+    dni = "1234"
+}
+
+object copia {
+    nombre = "Manuel"
+    dni = "1234"
+}
+
+object referencia {
+    nombre = "Manuel"
+    dni = "1234"
+}
+
+object lista {
+    personas = [manuel, copia, referencia]
+}
+
+manuel -- referencia : "Referencia a la misma instancia"
+manuel --> lista : "Inserta en la lista"
+copia --> lista : "Inserta en la lista"
+referencia --> lista : "Inserta en la lista"
+
+@enduml

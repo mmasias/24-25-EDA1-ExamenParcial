@@ -1,170 +1,85 @@
-# 24-25-EDA1-ExamenParcial
-
-## Pregunta 1: análisis de implementaciones
-
-Observe los siguientes fragmentos de código que implementan un nodo para una lista enlazada:
-
-**Implementación A**
-
-```java
-class Nodo {
-    private Persona persona;
-    private Nodo siguiente;
-    
-    public Nodo(Persona persona, Nodo siguiente) {
-        this.persona = new Persona(persona.getNombre(), persona.getDni());
-        this.siguiente = siguiente;
-    }
-}
-```
-
-**Implementación B**
-
-```java
-class Nodo {
-    private Persona persona;
-    private Nodo siguiente;
-    
-    public Nodo(Persona persona, Nodo siguiente) {
-        this.persona = persona;
-        this.siguiente = siguiente;
-    }
-}
-```
-
-||
-|-
-a) ¿Qué implementación considera que utiliza mejor los recursos de memoria? Justifique su respuesta.
-b) ¿Qué problemas o ventajas podría causar cada implementación? Proporcione ejemplos.
-c) ¿Cómo afectaría cada implementación al comportamiento de una lista que use estos nodos?
-
-## Pregunta 2: gestión de referencias
-
-Considere este código:
-
-```java
-class Lista {
-    private Nodo primero;
-    
-    public void insertarPersona(Persona persona) {
-        Nodo nuevo = new Nodo(persona, primero);
-        primero = nuevo;
-    }
-    
-    public boolean contiene(Persona persona) {
-        Nodo actual = primero;
-        while (actual != null) {
-            if (actual.getPersona().getDni().equals(persona.getDni())) {
-                return true;
-            }
-            actual = actual.getSiguiente();
-        }
-        return false;
-    }
-    
-    public Persona obtenerPersona(String dni) {
-        Nodo actual = primero;
-        while (actual != null) {
-            if (actual.getPersona().getDni().equals(dni)) {
-                return actual.getPersona();
-            }
-            actual = actual.getSiguiente();
-        }
-        return null;
-    }
-}
-```
-
-a) Si tenemos:
-
-```java
-Lista lista = new Lista();
-Persona juan = new Persona("Juan", "1234");
-lista.insertarPersona(juan);
-Persona personaEncontrada = lista.obtenerPersona("1234");
-personaEncontrada.setNombre("Juan Manuel");
-```
-¿Qué nombre tendrá la persona almacenada en la lista? ¿Por qué?
-
-b) ¿Qué sucedería si modificamos:
-
-```java
-juan.setNombre("Juan Carlos");
-```
-
-después de insertarlo en la lista? ¿Depende de la implementación del Nodo que usemos (A o B de la pregunta anterior)?
-
 ## Pregunta 3: referencias y constructores
 
-Analice este código:
+a) ¿Cuántos objetos Persona diferentes hay en memoria? Justifique su respuesta.
 
-```java
-public class Persona {
+Hay 2 objetos Persona diferentes:
+
+1. El objeto ***Manuel*** --> Persona manuel = new Persona("Manuel", "1234");
+
+2. El objeto ***copia*** --> Persona copia = new Persona(manuel);
+
+El objeto ***referencia*** --> Persona referencia = manuel; (Aquí no se crea un objeto nuevo, referencia a manuel que ya existe. No es un objeto diferente). 
+
+Los objetos en la lista son solo referencias a los objetos que ya existen también. Entonces creo que son dos.
+
+Ejemplo:
+
+``` public class Persona {
     private String nombre;
-    private String dni;
-    
-    public Persona(String nombre, String dni) {
+
+    public Persona(String nombre) {
         this.nombre = nombre;
-        this.dni = dni;
     }
-    
-    public Persona(Persona persona) {
-        this.nombre = persona.nombre;
-        this.dni = persona.dni;
+
+    public void cambiarNombre(String nuevoNombre) {
+        this.nombre = nuevoNombre;
     }
 }
 
 public class Principal {
     public static void main(String[] args) {
-        Persona manuel = new Persona("Manuel", "1234");
-        Persona copia = new Persona(manuel);
-        Persona referencia = manuel;
-        
-        Lista lista = new Lista();
-        lista.insertarPersona(manuel);
-        lista.insertarPersona(copia);
-        lista.insertarPersona(referencia);
+        Persona maria = new Persona("Maria");
+        Persona pedro = new Persona("Pedro");
+
+        pedro.cambiarNombre("Carlos");
+    }
+}
+ ```
+En este ejemplo, en memoria hay 2 objetos Persona diferentes: maria y pedro.
+
+
+b) Si hacemos manuel.setNombre("Manuel Antonio"), ¿qué elementos de la lista se verán afectados? ¿Por qué?
+
+Este cambio afecta al objeto ***Persona*** al que la variable ***manuel*** apunta. Entonces afectara al primer objeto creado con new Persona("Manuel", "1234").
+Los elementos afectados de la lista son ***manuel*** y ***referencia***.
+manuel y referencia apuntan al mismo objeto en memoria. Si cambiamos el nombre de ***manuel***, también se cambiará el nombre al que la referencia apunta, ya que ambas variables apuntan al mismo objeto.
+Pero ***copia*** es un objeto diferente en memoria, entonces no se verá afectado por el cambio de nombre, porque ***copia*** es una instancia distinta.
+El nombre de manuel será cambiado a "Manuel Antonio", y como referencia apunta al mismo objeto, también se afecta. El nombre de los dos será "Manuel Antonio".
+
+Ejemplo:
+
+```
+public class Producto {
+    private double precio;
+
+    public Producto(double precio) {
+        this.precio = precio;
+    }
+
+    public void setPrecio(double nuevoPrecio) {
+        this.precio = nuevoPrecio;
+    }
+
+    public double getPrecio() {
+        return this.precio;
+    }
+}
+
+public class Principal {
+    public static void main(String[] args) {
+        Producto laptop = new Producto(1000); 
+        Producto copiaLaptop = new Producto(laptop);  
+        Producto referenciaLaptop = laptop; 
+
+        laptop.setPrecio(1200);
+
+        System.out.println("Precio de laptop: " + laptop.getPrecio());       
+        System.out.println("Precio de copiaLaptop: " + copiaLaptop.getPrecio()); 
+        System.out.println("Precio de referenciaLaptop: " + referenciaLaptop.getPrecio()); 
     }
 }
 ```
+En ese ejemplo cuando se modifica por ejemplo laptop, la referencia ***referenciaLaptop*** también cambia porque ambas apuntan al mismo objeto.
+La copia ***copiaLaptop*** no se ve afectada, porque es un objeto independiente, creado con el mismo precio inicial pero en una nueva instancia. ***laptop*** y ***referenciaLaptop*** comparten el mismo precio actualizado.
+***copiaLaptop*** sigue con su precio original, ya que es un objeto independiente.
 
-||
-|-
-a) ¿Cuántos objetos Persona diferentes hay en memoria? Justifique su respuesta.
-b) Si hacemos `manuel.setNombre("Manuel Antonio")`, ¿qué elementos de la lista se verán afectados? ¿Por qué?
-
-## Pregunta 4: diseño y optimización
-
-Proponga una implementación de una Lista que:
-
-- Permita detectar si se está intentando insertar una referencia a una Persona que ya existe en la lista
-- Permita elegir si queremos insertar una copia de la Persona o mantener la referencia
-- Sea eficiente en el uso de memoria
-
-Explique su diseño y justifique las decisiones tomadas.
-
-## Pregunta 5: análisis de código
-
-Dado este fragmento:
-
-```java
-public class GestorPersonas {
-    private Lista lista;
-    
-    public void agregarPersona(Persona persona) {
-        if (!lista.contiene(persona)) {
-            lista.insertarPersona(persona);
-        }
-    }
-    
-    public Persona buscarPersona(String dni) {
-        return lista.obtenerPersona(dni);
-    }
-}
-```
-
-||
-|-
-a) ¿Qué problemas potenciales ve en este código respecto al manejo de referencias?
-b) ¿Cómo lo mejoraría para evitar modificaciones no deseadas de los objetos?
-c) Proponga una solución que proteja la integridad de los datos.
