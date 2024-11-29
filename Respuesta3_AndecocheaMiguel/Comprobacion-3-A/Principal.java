@@ -1,23 +1,15 @@
 class Nodo {
-    private Persona persona;
-    private Nodo siguiente;
+    public Persona persona;
+    public Nodo siguiente;
 
     public Nodo(Persona persona, Nodo siguiente) {
         this.persona = persona;
         this.siguiente = siguiente;
     }
-
-    public Persona getPersona() {
-        return persona;
-    }
-
-    public Nodo getSiguiente() {
-        return siguiente;
-    }
 }
 
 class Lista {
-    private Nodo primero;
+    public Nodo primero;
 
     public Lista() {
         this.primero = null;
@@ -33,9 +25,9 @@ class Lista {
     }
 }
 
-public class Persona {
-    private String nombre;
-    private String dni;
+class Persona {
+    public String nombre;
+    public String dni;
 
     public Persona(String nombre, String dni) {
         this.nombre = nombre;
@@ -45,18 +37,6 @@ public class Persona {
     public Persona(Persona persona) {
         this.nombre = persona.nombre;
         this.dni = persona.dni;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public String getDni() {
-        return dni;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 }
 
@@ -74,8 +54,9 @@ public class Principal {
         System.out.println("\nReferencias en la lista:");
         Nodo actual = lista.getCabeza();
         while (actual != null) {
-            System.out.println(System.identityHashCode(actual.getPersona()));
-            actual = actual.getSiguiente();
+            System.out.println(System.identityHashCode(actual.persona));
+            actual = actual.siguiente;
         }
     }
 }
+
