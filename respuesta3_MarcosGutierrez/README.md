@@ -47,7 +47,7 @@ public Nodo(Persona persona, Nodo siguiente) {
         this.siguiente = siguiente;
     }
 ```
-[Código UML](Diagramas/a/diagrama3a-a.puml)<br>
+[Código UML](https://github.com/marcosgutierrez6/24-25-EDA1-ExamenParcial/blob/9ae6ae3ce4eba11a5515b90837a64359bc38ce86/respuesta3_MarcosGutierrez/Diagramas/a/Diagrama3a-a.puml)<br>
 ![Diagrama UML](Diagramas/a/diagrama3a-a.svg)
 
 
@@ -72,7 +72,7 @@ public Nodo(Persona persona, Nodo siguiente) {
     } 
 ```
 
-[Código UML](Diagramas/a/diagrama3a-b.puml)<br>
+[Código UML](https://github.com/marcosgutierrez6/24-25-EDA1-ExamenParcial/blob/9ae6ae3ce4eba11a5515b90837a64359bc38ce86/respuesta3_MarcosGutierrez/Diagramas/a/Diagrama3a-b.puml)<br>
 ![Diagrama UML](Diagramas/a/diagrama3a-b.svg)
 
 ### b) Si hacemos manuel.setNombre("Manuel Antonio"), ¿qué elementos de la lista se verán afectados? ¿Por qué?
@@ -84,7 +84,7 @@ La `copia` no se verá afectada, ya que es un objeto independiente creado con lo
 
 **En resumen**, el cambio solo afectaría a `manuel` y `referencia` (ya que ambas variables apuntan al mismo objeto), mientras que el nodo que contiene a `copia` no se verá afectado, ya que es una instancia independiente.
 
-[Código UML](Diagramas/a/diagrama3b-a.puml)<br>
+[Código UML](https://github.com/marcosgutierrez6/24-25-EDA1-ExamenParcial/blob/9ae6ae3ce4eba11a5515b90837a64359bc38ce86/respuesta3_MarcosGutierrez/Diagramas/b/diagrama3b-a.puml)<br>
 ![Diagrama UML](Diagramas/b/diagrama3b-a.svg)
 
 ---
@@ -96,5 +96,5 @@ Por lo tanto, si se realiza el cambio `manuel.setNombre("Manuel Antonio")`, **to
 
 Por otro lado, el nodo que contiene a `copia` no se verá afectado, ya que `copia` es un objeto completamente independiente creado mediante una copia de `manuel` y no comparte la misma referencia.
 
-[Código UML](Diagramas/a/diagrama3b-b.puml)<br>
+[Código UML](https://github.com/marcosgutierrez6/24-25-EDA1-ExamenParcial/blob/9ae6ae3ce4eba11a5515b90837a64359bc38ce86/respuesta3_MarcosGutierrez/Diagramas/b/diagrama3b-b.puml)<br>
 ![Diagrama UML](Diagramas/b/diagrama3b-b.svg)
