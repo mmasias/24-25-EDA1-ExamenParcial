@@ -2,6 +2,18 @@
 
 a) ¿Cuántos objetos Persona diferentes hay en memoria? Justifique su respuesta. 
 
+**Implementación A**
+
+En esta implementación, el constructor de `Nodo` crea una **copia profunda** del objeto `Persona`, lo que significa que se crea un nuevo objeto `Persona` cada vez que se inserta una persona en la lista, incluso si los valores son los mismos entonces en memoria tiene 5 objetos.
+
+```java
+Persona manuel = new Persona("Manuel", "1234");
+Persona copia = new Persona(manuel);
+Persona referencia = manuel;
+```
+
+**Implementación B**
+
 **Respuesta y Justificación:** En este código tenemos 2 objetos Personas diferentes y 1 una referencia a uno de ellos que serían: 
 - **manuel:** Es el primer objeto Persona creado con el constructor normal.  
 - **copia:** Es un nuevo objeto Persona creado con el constructor de copia. Aunque tiene los mismos valores que manuel, es un objeto independiente en memoria.  
