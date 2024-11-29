@@ -15,14 +15,15 @@ b) Si hacemos `manuel.setNombre("Manuel Antonio")`, ¿qué elementos de la lista
 
 ---
 
-En la siguiente ruta estaría el código de cómo se debería hacer para que la pregunta b) sea posible y tambien de como sería el código completo:  
+En la siguiente ruta puedes encontrar el código que hace posible la pregunta b) y también el código completo:  
 
 [Pregunta_3](../dylanNaranjo/Pregunta3.java)
 
-## Diagrama UML 
+---
+
+## Diagrama UML  
 
 ![Diagrama UML](../dylanNaranjo/imagenes/image.png)
-
 
 
 

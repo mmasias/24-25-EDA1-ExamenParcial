@@ -28,4 +28,3 @@ Principal ..> Persona : crea
 Principal ..> Lista : usa
 
 @enduml
-
