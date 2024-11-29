@@ -1,4 +1,4 @@
-package src;
+package ImplementacionB.src;
 
 public class Lista {
     private Persona[] personas;

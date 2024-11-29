@@ -1,4 +1,4 @@
-package src;
+package ImplementacionB.src;
 public class Main {
     public static void main(String[] args) {
         Persona manuel = new Persona("Manuel", "1234");
