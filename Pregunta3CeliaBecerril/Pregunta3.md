@@ -1,22 +1,38 @@
-Pregunta 3: referencias y constructores
+# Pregunta 3: Referencias y Constructores
 
-a) ¿Cuántos objetos Persona diferentes hay en memoria? Justifique su respuesta.
+## a) ¿Cuántos objetos `Persona` diferentes hay en memoria? Justifique su respuesta.
 
-Hay 2 objetos `Persona` diferentes en memoria. `manuel` que se crea con el constructor `Persona(String nombre, String dni)`, y `copia` que se crea con el constructor `Persona(Persona persona)` que utiliza los valores de `manuel`.
+Hay **2 objetos `Persona` diferentes** en memoria: 
 
-Si referencia fuera un nuevo objeto creado con new Persona(manuel), entonces habría 3 objetos Persona en memoria.
+1. `manuel`, que se crea utilizando el constructor `Persona(String nombre, String dni)`.
+2. `copia`, que se crea utilizando el constructor `Persona(Persona persona)` copiando los valores de `manuel`.
 
-En Java, cuando se crea un objeto utilizando el operador `new`, se asigna un espacio en memoria para ese objeto. En nuestro caso, se crean dos objetos distintos en memoria. La variable `referencia` no crea un nuevo objeto, simplemente apunta al mismo objeto que `manuel`, por lo que no aumenta el número de objetos en memoria.
+Si `referencia` fuera un nuevo objeto creado con `new Persona(manuel)`, entonces habría **3 objetos `Persona`** en memoria.
 
-b) Si hacemos `manuel.setNombre("Manuel Antonio")`, ¿qué elementos de la lista se verán afectados? ¿Por qué?
+En Java, al crear un objeto con el operador `new`, se asigna un espacio en memoria para ese objeto. En este caso:
+- `manuel` y `referencia` apuntan al mismo objeto en memoria.
+- `copia` apunta a un objeto distinto, creado con el constructor de copia.
 
-`manuel` y `referencia` se verán afectados, ya que `referencia` es una referencia al mismo objeto que `manuel`. Cualquier cambio que se haga a través de `manuel` también afectará a `referencia`. `copia` no estará afectado porque es un objeto creado con el constructor de copia y no tiene la misma referencia que los otros dos.
+Por lo tanto, la variable `referencia` no incrementa el número de objetos, ya que simplemente señala al mismo objeto que `manuel`.
 
-En Java, las variables de tipo objeto no almacenan los objetos, sino referencias a los objetos. Cuando se asigna una variable de objeto a otra, ambas variables apuntan al mismo objeto en memoria. Por lo tanto, cualquier cambio realizado a través de una de las referencias se reflejará en el objeto apuntado por las 2 referencias.
+---
 
-Si copia fuera una referencia al mismo objeto que manuel (es decir, copia = manuel;), entonces copia también se vería afectado por el cambio de nombre
+## b) Si hacemos `manuel.setNombre("Manuel Antonio")`, ¿qué elementos de la lista se verán afectados? ¿Por qué?
 
-Código creado en la clase `Persona`:
+**Elementos afectados:**
+- `manuel` y `referencia` se verán afectados, ya que ambos apuntan al mismo objeto en memoria. Cualquier cambio que se haga a través de `manuel` también se reflejará en `referencia`.
+
+**Elementos no afectados:**
+- `copia` no se verá afectado porque es un objeto distinto creado con el constructor de copia. Su referencia no está vinculada al mismo objeto que `manuel` y `referencia`.
+
+### Explicación:
+En Java, las variables de tipo objeto no almacenan los objetos directamente, sino referencias a ellos. Si asignamos una referencia de objeto a otra variable, ambas apuntarán al mismo objeto. Cualquier cambio realizado a través de una referencia se reflejará en todas las demás referencias al mismo objeto.
+
+Si `copia` fuera una referencia al mismo objeto que `manuel` (por ejemplo, si hacemos `copia = manuel;`), entonces **todos** los elementos de la lista se verían afectados por el cambio.
+
+---
+
+## Código creado en la clase `Persona` para el método `setNombre`:
 
 ```java
 public void setNombre(String nombre) {
