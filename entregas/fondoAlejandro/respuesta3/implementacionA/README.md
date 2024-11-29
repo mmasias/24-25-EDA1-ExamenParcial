@@ -44,6 +44,10 @@ public Persona(Persona persona) {
 }
 ```
 
+Para justificar estas respuestas, he decidido mostrar los objetos creados y verificar si manuel, copia y referencia son el mismo objeto:
+
+https://github.com/alejandrofondo/24-25-EDA1-ExamenParcial/blob/5cd7d3a68c1586407ceb22bf8053abc0dc41dfd3/entregas/fondoAlejandro/respuesta3/implementacionA/Principal.java#L18
+
 ## *b) Implementación A*
 ```java
 manuel.setNombre("Manuel Antonio");
@@ -53,4 +57,4 @@ A pesar de ello, el objeto original manuel sí se verá afectado por la modifica
 
 Para justificar que los elementos de la lista no han sido afectados, muestro los objetos después de modificar manuel mediante .setNombre para verificar el estado de los mismos:
 
-https://github.com/alejandrofondo/24-25-EDA1-ExamenParcial/blob/4cbf2a79a613fde5e2e6151aee26421ba2f38bbc/entregas/fondoAlejandro/respuesta3/implementacionA/Principal.java#L31
+https://github.com/alejandrofondo/24-25-EDA1-ExamenParcial/blob/5cd7d3a68c1586407ceb22bf8053abc0dc41dfd3/entregas/fondoAlejandro/respuesta3/implementacionA/Principal.java#L35
