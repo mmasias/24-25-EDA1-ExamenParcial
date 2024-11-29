@@ -1,0 +1,44 @@
+@startuml
+
+class Persona {
+  - nombre: String
+  - dni: String
+}
+
+class Nodo {
+  - persona: Persona
+  - siguiente: Nodo
+}
+
+class Lista {
+  - primero: Nodo
+}
+
+Persona "1" --> "1..*" Nodo : contiene
+Lista "1" --> "1" Nodo : referencia
+
+' Relaciones de los objetos instanciados en el código
+object Manuel {
+  nombre = "Manuel"
+  dni = "1234"
+}
+
+object Copia {
+  nombre = "Manuel"
+  dni = "1234"
+}
+
+object Referencia {
+  nombre = "Manuel"
+  dni = "1234"
+}
+
+Manuel -[hidden]-> Copia
+Manuel -[hidden]-> Referencia
+
+Lista "1" --> "1..*" Nodo : tiene
+
+Nodo -> Persona : contiene
+Nodo -> Nodo : siguiente
+
+@enduml
