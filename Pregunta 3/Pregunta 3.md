@@ -44,14 +44,12 @@ a) En la memoria hay dos objetos persona diferentes, existe el primer "manuel"..
 ```
 Persona manuel = new Persona("Manuel", "1234");
 ```
-![alt text](<Primer objeto persona manuel.png>)
 
 un nuevo objeto persona "copia" con los mismos parametros que el primer objeto persona "manuel"...
 
 ```
 Persona copia = new Persona(manuel);
 ```
-![alt text](<Segundo objeto copia.png>)
 
 podría haber confusión con la siguiente línea del código ya que se podría pensar que "referencia" es otra nueva persona pero no, es una variable que apunta al primer objeto persona ya creada "manuel".
 
@@ -59,6 +57,7 @@ podría haber confusión con la siguiente línea del código ya que se podría p
     
 b) Si se hace `manuel.setNombre("Manuel Antonio")` se verían afectados el primer objero persona "manuel" y la variable "refencia" ya que como se ha explicado antes no es un objeto persona como tal pero apunta hacía "manuel" por lo que cualquier cambio que se haga sobre "manuel" tambien se hace sobre "refencia".
 
+![alt text](manuel.setNombre()-1.png)
 
 
 
