@@ -43,13 +43,14 @@ Persona copia = new Persona(manuel);
 Persona referencia = manuel;
 ```
 Pero si nos fijamos bien y nos centramos en la memoria veremos que solo hay guardados dos, los cuales son manuel y copia ya que referencia no crea un nuevo objeto si no que simplemente apunta al mismo objeto que manuel.
-Todo esto se puede comprobar usando el comando System.identityHashCode() el cual nos verifica todo esto y se puede ver en la clase Principal.java la cual se encuentra en la carpeta Comprobacion-3-A la cual al ejecutarse nos dara lo siguiente por la terminal:
+
+Todo esto se puede comprobar usando el comando System.identityHashCode() el cual nos verifica todo esto y se puede comprobar en la clase `Principal.java` la cual se encuentra en la carpeta `Comprobacion-3-A` que al ejecutarse nos dara lo siguiente por la terminal:
 Referencias en la lista:
 681842940
 1392838282
 681842940
 
-En conclusion manuel y referencia son el mismo objeto en memoria ya que utilizan las misma referencia  en cambio  Copia es otro completamente diferente creado como una copia de manuel pero con una referencia distinta.
+En conclusion `manuel` y `referencia`  son el mismo objeto en memoria ya que utilizan las misma referencia  en cambio  `Copia` es otro completamente diferente creado como una copia de manuel pero con una referencia distinta.
 
 ## b)
 ### Usando la implementacion a:
