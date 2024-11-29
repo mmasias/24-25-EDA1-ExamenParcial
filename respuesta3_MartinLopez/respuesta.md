@@ -9,8 +9,7 @@ Esto se debe a que en un principio se crean dos objetos `manuel` y `copia`. Sin 
 
 <br>
 
-![Código UML](respuesta3_MartinLopez\diagramas\apartado a\diagramaImplementacionA.puml)
-![Diagrama UML](respuesta3_MartinLopez\diagramas\apartado a\diagramaImplementacionA.svg)
+![Código UML y diagrama](respuesta3_MartinLopez/diagramas/apartado a)
 
 <br>
 
@@ -18,8 +17,7 @@ Esto se debe a que en un principio se crean dos objetos `manuel` y `copia`. Sin 
 Si, por otro lado, la clase `Nodo` correspondiese a la implementación B habría dos objetos de la clase `Persona` en su lugar.
 Esto es debido a que en un principio se crean los dos mismos objetos que en un principio, estos son `manuel` y `copia`. Estos objetos son agregados a lista, la cual crea un objeto de la clase `Nodo` llamando a su constructor. Sin embargo, el constructor de la implementacion B de `Nodo`, a diferencia de la implementación A, simplemente guarda el objeto que se le es pasado por parámetro, es decir, no crea otro objeto de la clase `Persona`.
 
-![Código UML](respuesta3_MartinLopez\diagramas\apartado b\diagramaImplementacionB.puml)
-![Diagrama UML](respuesta3_MartinLopez\diagramas\apartado b\diagramaImplementacionB.svg)
+![Código UML y diagrama](respuesta3_MartinLopez/diagramas/apartado b)
 
 <br>
 
