@@ -19,6 +19,11 @@ En la siguiente ruta estaría el código de cómo se debería hacer para que la 
 
 [Pregunta_3](../dylanNaranjo/Pregunta3.java)
 
+## Diagrama UML 
+
+![Diagrama UML](../dylanNaranjo/imagenes/image.png)
+
+
 
 
 
