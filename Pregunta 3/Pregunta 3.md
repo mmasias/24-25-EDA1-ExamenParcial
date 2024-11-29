@@ -38,8 +38,9 @@ a) ¿Cuántos objetos Persona diferentes hay en memoria? Justifique su respuesta
 b) Si hacemos `manuel.setNombre("Manuel Antonio")`, ¿qué elementos de la lista se verán afectados? ¿Por qué?     
 
 ## Respuestas pregunta 3
+### Implementación B:
 
-a) Utilizando la implementación B, en la memoria hay dos objetos persona diferentes, existe el primer "manuel"...  
+a) En la memoria hay dos objetos persona diferentes, existe el primer "manuel"...  
 
 ```
 Persona manuel = new Persona("Manuel", "1234");
@@ -58,6 +59,24 @@ podría haber confusión con la siguiente línea del código ya que se podría p
 b) Si se hace `manuel.setNombre("Manuel Antonio")` se verían afectados el primer objero persona "manuel" y la variable "refencia" ya que como se ha explicado antes no es un objeto persona como tal pero apunta hacía "manuel" por lo que cualquier cambio que se haga sobre "manuel" tambien se hace sobre "refencia".
 
 ![alt text](manuel.setNombre()-1.png)
+
+### Implementación A:
+
+a) En la memoria hay cinco objetos diferentes, al igual que en la implementación anterior se crean los objetos "manuel" y "copia", lo que hace diferente en esta implementación es que a la hora de insertar las personas en la lista los nodos crean un nuevo objeto persona con los parametros que se hallan pasado.
+
+```
+public Nodo(Persona persona, Nodo siguiente) {
+     this.persona = new Persona(persona.getNombre(), (String) persona.getDni());
+    this.siguiente = siguiente;
+}
+```
+
+![alt text](<Cinco objetos persona-1.png>)
+
+b) Si se hace `manuel.setNombre("Manuel Antonio")` se verían afectados al igual que la implementación anterior "manuel" y "referencia" y por ende también se van a ver afectados al insertarse y crearse los nodos "manuel" y "referencia" en la copia 
+
+![alt text](<manuel.setNombre() A-1.png>) 
+
 
 
 

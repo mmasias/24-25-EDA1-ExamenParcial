@@ -6,11 +6,10 @@ class Nodo {
         this.persona = persona;
         this.siguiente = siguiente;
     }
-
     public Object getPersona() {
         return this.persona = persona;
     }
-
+    
     public Nodo getSiguiente() {
         return this.siguiente = siguiente;
     }
