@@ -21,6 +21,8 @@ Esto es debido a que en un principio se crean los dos mismos objetos que en un p
 ![ImagenDiagrama](diagramas/apartado_b/diagramaImplementacionB.svg)
 <br>
 
+En resumen, la implementación A de `Nodo` contiene Y crea objetos de clase `Persona`, sin emabrgo, la implementación B de `Nodo` SOLO contiene objetos de clase `Persona`.
+
 ### b)
 
 Si la clase nodo corresponde a la implementación A, ningún elemento de la lista se verá afectado por este cambio en `manuel`, ya que:
