@@ -1,3 +1,5 @@
+package Respuesta;
+
 class Lista {
     private Nodo primero;
 

@@ -1,4 +1,5 @@
-|| |- a) ¿Cuántos objetos Persona diferentes hay en memoria? Justifique su respuesta. 
+Respuesta de Miguel Castañeda
+|| |- a) ¿Cuántos objetos Respuesta.Persona diferentes hay en memoria? Justifique su respuesta. 
 b) Si hacemos manuel.setNombre("Manuel Antonio"), ¿qué elementos de la lista se verán afectados? ¿Por qué?
 
 a) Hay dos personas porque "referencia" es un puntero a una persona ya existente. Copia se forma a partir de strings ya existentes, y pueden existir strings idénticas, a diferencia de los objetos.

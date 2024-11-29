@@ -1,17 +1,17 @@
-/*
-class Nodo {
-    private Persona persona;
-    private Nodo siguiente;
+package Respuesta;/*
+class Respuesta.Nodo {
+    private Respuesta.Persona persona;
+    private Respuesta.Nodo siguiente;
 
-    public Nodo(Persona persona, Nodo siguiente) {
-        this.persona = new Persona(persona.getNombre(), persona.getDni());
+    public Respuesta.Nodo(Respuesta.Persona persona, Respuesta.Nodo siguiente) {
+        this.persona = new Respuesta.Persona(persona.getNombre(), persona.getDni());
         this.siguiente = siguiente;
     }
-    public Persona getPersona(){
+    public Respuesta.Persona getPersona(){
         return persona;
     }
 
-    public Nodo getSiguiente(){
+    public Respuesta.Nodo getSiguiente(){
         return siguiente;
     }
 }*/
