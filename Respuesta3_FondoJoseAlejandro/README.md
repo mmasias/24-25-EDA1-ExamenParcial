@@ -22,6 +22,10 @@ Persona copia = new Persona(manuel);
 ```
 que genera un nuevo objeto en memoria con los mismos atributos que manuel, pero son independientes.
 
+Para justificar estas respuestas, he decidido mostrar los objetos creados y verificar si manuel, copia y referencia son el mismo objeto:
+
+https://github.com/alejandrofondo/24-25-EDA1-ExamenParcial/blob/8064a7cc49eedbb6541f8d353854c72ca0e40727/Respuesta3_FondoJoseAlejandro/Principal.java#L12
+
 ## *b)*
 ```java
 manuel.setNombre("Manuel Antonio");
@@ -39,3 +43,7 @@ Por último,
 Persona copia = new Persona(manuel); 
 ```
 no se vería afectado porque es un objeto independiente clonado en memoria.
+
+Para justificar los elementos de la lista afectados, muestro los objetos después de modificar manuel mediante .setNombre para verificar el estado de los mismos:
+
+https://github.com/alejandrofondo/24-25-EDA1-ExamenParcial/blob/8064a7cc49eedbb6541f8d353854c72ca0e40727/Respuesta3_FondoJoseAlejandro/Principal.java#L21
