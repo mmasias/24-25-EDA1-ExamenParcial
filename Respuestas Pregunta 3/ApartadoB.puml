@@ -1,0 +1,26 @@
+@startuml ApartadoB
+
+object "Persona (manuel)" as Manuel {
+    nombre: "Manuel Antonio"
+    dni: "1234"
+}
+
+object "Persona (copia)" as Copia {
+    nombre: "Manuel"
+    dni: "1234"
+}
+
+ref_m -> Manuel : "manuel"
+ref_r -> Manuel : "referencia"
+ref_c -> Copia  : "copia"
+
+object "Lista" as Lista {
+    0: Persona (manuel)
+    1: Persona (copia)
+    2: Persona (manuel)
+}
+
+Lista --> Manuel : "0"
+Lista --> Copia : "1"
+Lista --> Manuel : "2"
+@enduml

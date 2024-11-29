@@ -1,0 +1,46 @@
+@startuml ApartadoAImplementacionA
+
+class Referencia {
+    - nombre: "Manuel"
+    - edad: "1234"
+}
+
+class Manuel {
+    - nombre: "Manuel"
+    - edad: "1234"
+}
+
+class nodoManuel_persona {
+    - direccion: "Manuel"
+    - dni: String
+}
+
+class Persona {
+    - nombre: String
+    - dni: String
+}
+
+class Copia {
+    - nombre: "Manuel"
+    - edad: "1234"
+}
+
+class nodo2_persona {
+    - nombre: "Manuel"
+    - edad: "1234"
+}
+
+class nodo3_persona {
+    - nombre: "Manuel"
+    - edad: "1234"
+}
+
+Referencia --> Manuel 
+Manuel --> nodoManuel_persona 
+nodoManuel_persona --> Persona
+Copia --> Persona 
+Manuel --> Persona
+nodo2_persona --> Persona 
+nodo3_persona --> Persona 
+
+@enduml
