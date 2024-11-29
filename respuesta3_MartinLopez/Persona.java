@@ -13,7 +13,13 @@ package respuesta3_MartinLopez;
         this.nombre = persona.nombre;
         this.dni = persona.dni;
     }
-}
- Persona {
+
+    public String getDni() {
+        return this.dni;
+    }
+
+    public String getNombre() {
+        return this.nombre;
+    }
     
 }

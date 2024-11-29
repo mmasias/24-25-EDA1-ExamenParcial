@@ -1,14 +1,18 @@
 package respuesta3_MartinLopez;
 class Lista {
-    private Nodo primero;
+    private NodoA primero;
+
+    public Lista(){
+        this.primero = null;
+    }
     
     public void insertarPersona(Persona persona) {
-        Nodo nuevo = new Nodo(persona, primero);
+        NodoA nuevo = new NodoA(persona, primero);
         primero = nuevo;
     }
     
     public boolean contiene(Persona persona) {
-        Nodo actual = primero;
+        NodoA actual = primero;
         while (actual != null) {
             if (actual.getPersona().getDni().equals(persona.getDni())) {
                 return true;
@@ -19,7 +23,7 @@ class Lista {
     }
     
     public Persona obtenerPersona(String dni) {
-        Nodo actual = primero;
+        NodoA actual = primero;
         while (actual != null) {
             if (actual.getPersona().getDni().equals(dni)) {
                 return actual.getPersona();
