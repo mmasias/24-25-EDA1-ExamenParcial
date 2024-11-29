@@ -8,6 +8,9 @@ public class CasoA {
       lista.insertarPersona(manuel);
       lista.insertarPersona(copia);
       lista.insertarPersona(referencia);
+
+      manuel.setNombre("Manuel Antonio");
+
    }
 }
 
@@ -23,6 +26,10 @@ class Persona {
    public Persona(Persona persona) {
       this.nombre = persona.nombre;
       this.dni = persona.dni;
+   }
+
+   public void setNombre(String newName) {
+      this.nombre = newName;
    }
 
    public String getNombre() {

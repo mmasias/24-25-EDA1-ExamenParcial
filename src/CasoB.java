@@ -8,6 +8,8 @@ public class CasoB {
       lista.insertarPersona(manuel);
       lista.insertarPersona(copia);
       lista.insertarPersona(referencia);
+
+      manuel.setNombre("Manuelito");
    }
 }
 
@@ -24,16 +26,21 @@ class Persona {
       this.nombre = persona.nombre;
       this.dni = persona.dni;
    }
+
+   public void setNombre(String newName) {
+      this.nombre = newName;
+   }
+
 }
 
 class Nodo {
-    private Persona persona;
-    private Nodo siguiente;
-    
-    public Nodo(Persona persona, Nodo siguiente) {
-        this.persona = persona;
-        this.siguiente = siguiente;
-    }
+   private Persona persona;
+   private Nodo siguiente;
+
+   public Nodo(Persona persona, Nodo siguiente) {
+      this.persona = persona;
+      this.siguiente = siguiente;
+   }
 }
 
 class Lista {
@@ -44,4 +51,3 @@ class Lista {
       primero = nuevo;
    }
 }
-

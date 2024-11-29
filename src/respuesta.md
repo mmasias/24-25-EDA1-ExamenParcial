@@ -39,7 +39,7 @@ b) Si hacemos `manuel.setNombre("Manuel Antonio")`, ¿qué elementos de la lista
 
 ### Respuesta
 
-a) En este caso, la cantidad de objetos dependerá de la implementación del nodo que se utilice. Cabe aclarar que en ambos casos siempre habrá un mínimo de 2 objetos `Persona`:
+A) En este caso, la cantidad de objetos dependerá de la implementación del nodo que se utilice. Cabe aclarar que en ambos casos siempre habrá un mínimo de 2 objetos `Persona`:
 
 ```java
         Persona manuel = new Persona("Manuel", "1234");
@@ -49,7 +49,6 @@ a) En este caso, la cantidad de objetos dependerá de la implementación del nod
 
 - Si se utiliza la implementación de **Nodo A**, habrá un total de 5 objetos `Persona` en memoria.
 
-  - [Depuración A](../images/depuradorA.png)
     <img src="../images/depuradorA.png"/>
 
 
@@ -57,8 +56,17 @@ a) En este caso, la cantidad de objetos dependerá de la implementación del nod
 
 - Si se utiliza la implementación de **Nodo B**, habrá un total de 2 objetos `Persona` en memoria.
 
-  - [Depuración B](../images/depuradorB.png)
     <img src="../images/depuradorB.png"/>
 
   El código se encuentra en: [CasoB.java](./CasoB.java)
+
+B) Nuevamente depende de la implementación, como se vio en la respuesta A el comportamiento de los objetos `Persona` varía según la implementación del nodo. En el caso de **Nodo A**, si se modifica el nombre de `manuel`, no se verá afectado ningún elemento de la lista, ya que al insertar una persona a la lista siempre se crea un nuevo objeto `Persona`. En el caso de **Nodo B** afectara al primer y ultimo nodo de la lista, ya que ambos nodos apuntan al mismo objeto.
+
+- Depuración del caso "A"
+
+    <img src="../images/depuradorB_caseA.png"/>
+
+- Depuración del caso "B"
+
+    <img src="../images/depuradorB_caseB.png"/>
 
