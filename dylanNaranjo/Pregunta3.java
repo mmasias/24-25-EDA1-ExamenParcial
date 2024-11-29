@@ -31,7 +31,7 @@ public class Pregunta3 {
 
         private Persona[] personas;
         private int contador;
-        private static final int Inicial = 5;
+        private static int Inicial = 5;
 
         public Lista() {
             personas = new Persona[Inicial];
