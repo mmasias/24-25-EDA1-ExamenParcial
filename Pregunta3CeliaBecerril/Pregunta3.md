@@ -1,13 +1,18 @@
 # Pregunta 3: Referencias y Constructores
 
+
 ## a) ¿Cuántos objetos `Persona` diferentes hay en memoria? Justifique su respuesta.
 
+**Implementación A**  
+Hay 5 objetos `Persona` en memoria. Esto se debe a que inicialmente se crean dos objetos: `manuel` y `copia`. Sin embargo, cuando estos objetos se agregan a la lista `lista`, esta lista llama al constructor de `Nodo` pasándole como parámetro la referencia del objeto de tipo `Persona`. Al llegar al constructor de este `Nodo`, este vuelve a llamar al constructor de `Persona`, creando así un nuevo objeto.
+
+**Implementación B**  
 Hay **2 objetos `Persona` diferentes** en memoria: 
 
 1. `manuel`, que se crea utilizando el constructor `Persona(String nombre, String dni)`.
 2. `copia`, que se crea utilizando el constructor `Persona(Persona persona)` copiando los valores de `manuel`.
 
-Si `referencia` fuera un nuevo objeto creado con `new Persona(manuel)`, entonces habría **3 objetos `Persona`** en memoria.
+Si `referencia` fuera un nuevo objeto creado con `new Persona(manuel)`, entonces habría **3 objetos `Persona** en memoria.
 
 En Java, al crear un objeto con el operador `new`, se asigna un espacio en memoria para ese objeto. En este caso:
 - `manuel` y `referencia` apuntan al mismo objeto en memoria.
@@ -19,27 +24,18 @@ Por lo tanto, la variable `referencia` no incrementa el número de objetos, ya q
 
 ## b) Si hacemos `manuel.setNombre("Manuel Antonio")`, ¿qué elementos de la lista se verán afectados? ¿Por qué?
 
-**Elementos afectados:**
-- `manuel` y `referencia` se verán afectados, ya que ambos apuntan al mismo objeto en memoria. Cualquier cambio que se haga a través de `manuel` también se reflejará en `referencia`.
 
-**Elementos no afectados:**
-- `copia` no se verá afectado porque es un objeto distinto creado con el constructor de copia. Su referencia no está vinculada al mismo objeto que `manuel` y `referencia`.
+**Implementación A**  
+Ningún elemento de la lista se verá afectado por este cambio en `manuel`, ya que cuando se inserta `manuel` en la lista, el nodo crea una nueva instancia de `Persona` con los mismos valores que `manuel`. Esa nueva instancia es independiente de la original, por lo que no importa si modificas el objeto después. Sin embargo, el objeto original `manuel` sí se verá afectado.
 
-### Explicación:
-En Java, las variables de tipo objeto no almacenan los objetos directamente, sino referencias a ellos. Si asignamos una referencia de objeto a otra variable, ambas apuntarán al mismo objeto. Cualquier cambio realizado a través de una referencia se reflejará en todas las demás referencias al mismo objeto.
+**Implementación B**  
+Además del propio objeto original `manuel`, los elementos `manuel` y `referencia` de la lista se verán alterados. Aunque `copia` haya sido creada a partir de `manuel`, es un objeto independiente, mientras que `referencia` no es un objeto en sí, sino una referencia que apunta a `manuel`.
 
-Si `copia` fuera una referencia al mismo objeto que `manuel` (por ejemplo, si hacemos `copia = manuel;`), entonces **todos** los elementos de la lista se verían afectados por el cambio.
+Por lo tanto:
+- `manuel` se verá afectado porque es el objeto que se está modificando.
+- `referencia` se verá afectado porque apunta al mismo objeto que `manuel`.
+- `copia` no se verá afectado porque es una copia independiente de `manuel`.
 
 ---
 
-## Código creado en la clase `Persona` para el método `setNombre`:
 
-```java
-public void setNombre(String nombre) {
-    this.nombre = nombre;
-}
-````
-
-| Diagrama | Código Fuente |
-|----------|---------------|
-| ![Actores](https://github.com/celiabecerril/24-25-EDA1-ExamenParcial/blob/main/Pregunta3CeliaBecerril/diagrama.svg) | [Ver código](https://github.com/celiabecerril/24-25-EDA1-ExamenParcial/blob/main/Pregunta3CeliaBecerril/diagrama.puml) |

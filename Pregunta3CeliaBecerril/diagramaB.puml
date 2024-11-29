@@ -1,0 +1,14 @@
+@startuml
+hide circle
+class Persona {
+  
+}
+
+manuel : Persona
+copia : Persona
+referencia : Persona
+
+manuel --> Persona : "manuel"
+copia --> Persona : "copia"
+referencia --> Persona : "manuel"
+@enduml
