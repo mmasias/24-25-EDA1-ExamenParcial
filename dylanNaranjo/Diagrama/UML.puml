@@ -1,0 +1,31 @@
+@startuml
+
+class Persona {
+    - String nombre
+    - String dni
+    + Persona(nombre: String, dni: String)
+    + Persona(persona: Persona)
+    + setNombre(nombre: String): void
+    + toString(): String
+}
+
+class Lista {
+    - Persona[] personas
+    - int contador
+    - static final int CAPACIDAD_INICIAL = 10
+    + Lista()
+    + insertarPersona(persona: Persona): void
+    - ampliarCapacidad(): void
+    + mostrarLista(): void
+}
+
+class Principal {
+    + main(args: String[]): void
+}
+
+Persona "1" *-- "0..*" Lista : contiene
+Principal ..> Persona : crea
+Principal ..> Lista : usa
+
+@enduml
+

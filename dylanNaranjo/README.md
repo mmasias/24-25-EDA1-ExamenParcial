@@ -13,9 +13,13 @@ b) Si hacemos `manuel.setNombre("Manuel Antonio")`, ¿qué elementos de la lista
 
 **Respuesta y Justificación:** Para lograr esto primero tendriamos que agregar un método `setNombre()` en la clase `Persona` ya que en el código proporcionado no lo tenemos y agregarlo afectaria dos elementos de la lista el que le corresponde a `manuel` y a `referencia` ya que estos dos apuntan al mismo objeto por otro lado tenemos `copia` que es un objeto independiente creado con el constructor de copia entonces cualquier cambio en `manuel` no le afectan.
 
-En la siguiente ruta estaría el código de cómo se debería hacer para que la pregunta b) sea posible:  
+---
+
+En la siguiente ruta estaría el código de cómo se debería hacer para que la pregunta b) sea posible y tambien de como sería el código completo:  
 
 [Pregunta_3](../dylanNaranjo/Pregunta3.java)
+
+
 
 
 
