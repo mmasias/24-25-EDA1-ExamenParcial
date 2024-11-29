@@ -38,3 +38,7 @@ Si `copia` fuera una referencia al mismo objeto que `manuel` (por ejemplo, si ha
 public void setNombre(String nombre) {
     this.nombre = nombre;
 }
+
+| Diagrama | Código Fuente |
+|----------|---------------|
+| ![Actores]() | [Ver código]() |
