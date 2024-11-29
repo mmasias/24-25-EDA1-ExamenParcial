@@ -31,7 +31,7 @@ Entonces, en total tenemos los siguientes objetos:
 6. Un objeto `Nodo` que contiene a `referencia` (pero que es en realidad el mismo objeto que `manuel`).
 
 Todo esto queda demostrado mediante el siguiente diagrama:
-![Diagrama](image.png)
+![Diagrama](Diagrama.png)
 
 
 ### Usando la implementación b:
