@@ -29,6 +29,6 @@ Sin emabrgo el objeto original `manuel` si que se verá afectado.
 
 <br>
 
-Por otro lado, si la clase `Nodo` correspondiese a la implementación B, los elementos `manuel` y `referencia` se verían alterados ya que, aunque `copia` haya sido creada a partir de `manuel` es un objeto independiente, mientras que `copia` no es un objeto en sí, tan solo es un puntero que referencia a `manuel`.
+Por otro lado, si la clase `Nodo` correspondiese a la implementación B, además del propio objeto original `manuel`, los elementos `manuel` y `referencia` de la lista se verían alterados ya que, aunque `copia` haya sido creada a partir de `manuel` es un objeto independiente, mientras que `copia` no es un objeto en sí, tan solo es un puntero que referencia a `manuel`.
 
 
