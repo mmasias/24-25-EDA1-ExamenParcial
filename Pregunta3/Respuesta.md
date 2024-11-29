@@ -17,7 +17,7 @@ En el código proporcionado, podemos determinar el número de objetos `Persona` 
         Esta línea no crea un nuevo objeto. referencia simplemente apunta al mismo objeto al que manuel está apuntando. Esto significa que referencia y manuel son dos referencias al mismo objeto en memoria.
 
 
-![Diagrama Explicativo](images/RespuestaA.svg)
+![Diagrama Explicativo](Images/RespuestaA.svg)
 ---
 
 ## Pregunta (b): Si hacemos manuel.setNombre("Manuel Antonio"), ¿qué elementos de la lista se verán afectados? ¿Por qué?
@@ -29,9 +29,10 @@ Asi que, los Objetos Afectados por el Cambio son:  **manuel** y **referencia**
 **Razón**: Al modificar **manuel**, también se modifica **referencia** porque ambas apuntan a la **misma instancia** del objeto Persona. En cambio, **copia** es una copia distinta del objeto original, por lo que sus atributos permanecen igual después del cambio.
 
 
-Aqui está la captura del resultado de la ejecución del código después de cambiar el nombre de `manuel`:
-![Codigo Ejecutado](images/CambioNombre.png)
+
+He completado el codigo original para que se pueda ver con un ejemplo concreto que pasaría al cambiar el nombre de **manuel**. 
 
 
-
-
+| Captura del resultado de ejecución                   | Código Fuente                |
+|---------------------------------------|------------------------------------------|
+| ![Codigo Ejecutado](Images/CambioNombre.png) | [Codigo Fuente](src/)      |
