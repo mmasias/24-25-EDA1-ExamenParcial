@@ -1,3 +1,5 @@
+package palmaCamila;
+
 public class Principal {
     public static void main(String[] args) {
         Persona manuel = new Persona("Manuel", "1234");

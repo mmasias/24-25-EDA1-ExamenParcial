@@ -1,3 +1,5 @@
+package palmaCamila;
+
 class NodoA {
     private Persona persona;
     private NodoA siguiente;

@@ -1,3 +1,5 @@
+package palmaCamila;
+
 class Lista {
     private NodoA primero;
 
