@@ -39,7 +39,7 @@ b) Si hacemos `manuel.setNombre("Manuel Antonio")`, ¿qué elementos de la lista
 
 ### Respuesta
 
-a) En este caso la cantidad de objetos dependera de la implementación de nodo que se utilizé, cabe aclara que en ambos casos siempre va a haber un minimo de 2 objetos Personas:
+a) En este caso, la cantidad de objetos dependerá de la implementación del nodo que se utilice. Cabe aclarar que en ambos casos siempre habrá un mínimo de 2 objetos `Persona`:
 
 ```java
         Persona manuel = new Persona("Manuel", "1234");
@@ -47,16 +47,15 @@ a) En este caso la cantidad de objetos dependera de la implementación de nodo q
         Persona referencia = manuel;
 ```
 
-- Si se utiliza la implementación de Nodo A, habrá un total de 5 objetos Persona en memoria
+- Si se utiliza la implementación de **Nodo A**, habrá un total de 5 objetos `Persona` en memoria.
 
-- [Depuración A] (../images/depuradorA.png)
+  - [Depuración A](../images/depuradorA.png)
 
-El codigo se encuentra en: (./CasoA.java)
+  El código se encuentra en: [CasoA.java](./CasoA.java)
 
-- Si se utiliza la implementación de Nodo B, habrá un total de 2 objetos Persona en memoria  
+- Si se utiliza la implementación de **Nodo B**, habrá un total de 2 objetos `Persona` en memoria.
 
-- [Depuración B] (../images/depuradorB.png)
+  - [Depuración B](../images/depuradorB.png)
 
-El codigo se encuentra en: (./CasoB.java)
-
+  El código se encuentra en: [CasoB.java](./CasoB.java)
 
