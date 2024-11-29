@@ -1,3 +1,5 @@
+package implementacionA;
+
 public class Persona {
     private String nombre;
     private String dni;
@@ -23,5 +25,9 @@ public class Persona {
     @Override
     public String toString() {
         return "Persona[nombre=" + nombre + ", dni=" + dni + "]";
+    }
+
+    public String getDni() {
+        return dni;
     }
 }

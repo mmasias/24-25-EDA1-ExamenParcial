@@ -1,5 +1,7 @@
+package implementacionA;
+
 public class Lista {
-    private Nodo cabeza;
+    public Nodo cabeza;
 
     public Lista() {
         this.cabeza = null;

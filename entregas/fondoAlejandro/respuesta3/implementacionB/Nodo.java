@@ -1,3 +1,4 @@
+package implementacionB;
 public class Nodo {
     public Persona persona;
     public Nodo siguiente;

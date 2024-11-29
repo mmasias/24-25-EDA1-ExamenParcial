@@ -2,13 +2,13 @@
 
 ---
 
-## *a)*
+## *a) Implementación B*
 ```java
 Persona manuel = new Persona("Manuel", "1234");
 Persona referencia = manuel;
 Persona copia = new Persona(manuel);
 ```
-Encontramos 2 objetos Persona diferentes, uno creado por 
+En base a la implementación B, encontramos 2 objetos Persona diferentes, uno creado por 
 ```java 
 Persona manuel = new Persona("Manuel", "1234");
 ``` 
@@ -26,7 +26,7 @@ Para justificar estas respuestas, he decidido mostrar los objetos creados y veri
 
 https://github.com/alejandrofondo/24-25-EDA1-ExamenParcial/blob/c78d46656aba5b687bff062e24c905d3ab300e86/entregas/fondoAlejandro/respuesta3/Principal.java#L12
 
-## *b)*
+## *b) Implementación B*
 ```java
 manuel.setNombre("Manuel Antonio");
 ```
