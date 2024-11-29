@@ -42,4 +42,4 @@ En resumen: la modificación afectará a dos elementos de la lista (primero y te
 
 | Diagrama | Código Fuente |
 |----------|---------------|
-| ![Actores](Pregunta3\DiagramaExplicativo.svg) | [Ver código](Pregunta3\DiagramaExplicativo.puml) |
+| ![Actores](https://github.com/JoseSalceda/24-25-EDA1-ExamenParcial/blob/main/Pregunta3/DiagramaExplicativo.svg) | [Ver código](https://github.com/JoseSalceda/24-25-EDA1-ExamenParcial/blob/main/Pregunta3/DiagramaExplicativo.puml) |
