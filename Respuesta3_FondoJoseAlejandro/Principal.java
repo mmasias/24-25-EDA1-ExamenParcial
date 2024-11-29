@@ -15,6 +15,7 @@ public class Principal {
 
         System.out.println("\n¿'manuel' y 'copia' son el mismo objeto?: " + (manuel == copia));
         System.out.println("¿'manuel' y 'referencia' son el mismo objeto?: " + (manuel == referencia));
+        System.out.println("¿'copia' y 'referencia' son el mismo objeto?: " + (copia == referencia));
 
         manuel.setNombre("Manuel Antonio");
 
@@ -25,5 +26,6 @@ public class Principal {
 
         System.out.println("\n¿El nombre de 'copia' cambió?: " + (copia.getNombre().equals("Manuel Antonio")));
         System.out.println("¿El nombre de 'referencia' cambió?: " + (referencia.getNombre().equals("Manuel Antonio")));
+        System.out.println("¿El nombre de 'manuel' cambió?: " + (manuel.getNombre().equals("Manuel Antonio")));
     }
 }
