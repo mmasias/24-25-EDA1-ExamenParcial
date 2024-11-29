@@ -1,13 +1,12 @@
 ## Ejercicio 3
 
 ## a) ¿Cuántos objetos Persona diferentes hay en memoria? Justifique su respuesta.
-Podemos encontrar 2 objetos Persona diferentes en memoria.
-Estos son el objeto manuel y el objeto copia.
+En la implementación A de la clase Nodo, se generan un total de cinco objetos de la clase Persona.
 
-El objeto manuel es creado utilizando el constructor que recibe un nombre y un DNI como podemos ver en: Persona manuel = new Persona("Manuel", "1234");
+Esto sucede porque, al inicio, se crean únicamente los objetos manuel y copia. Sin embargo, al agregarlos a la lista lista, esta utiliza el constructor de la clase Nodo, que recibe como argumento una referencia al objeto de tipo Persona. Dentro de este constructor, se invoca nuevamente el constructor de Persona, lo que provoca la creación de un nuevo objeto por cada elemento insertado en la lista.
+En cambio, si la clase Nodo siguiera la implementación B, solo existirían dos objetos de la clase Persona.
 
-El objeto copia se crea utilizando el constructor que recibe otro objeto de tipo Persona, como podemos ver en: Persona copia = new Persona(manuel);  Este constructor lo que hace es copiar los valores de nombre y dni de manuel pero crea un nuebo objeto en memoria
-Persona referencia = manuel;  esto sin embargo no crea un nuevo objeto porque  es una simple referencia al mismo objeto que apunta la variable manuel
+Esto se debe a que inicialmente se crean los mismos dos objetos: manuel y copia. Al añadirlos a la lista, esta genera nodos utilizando el constructor de la clase Nodo. Sin embargo, a diferencia de la implementación A, el constructor de la implementación B no crea nuevas instancias de la clase Persona, sino que simplemente almacena la referencia al objeto recibido como parámetro, evitando la creación de copias adicionales.
 
 ## b) Si hacemos `manuel.setNombre("Manuel Antonio")`, ¿qué elementos de la lista se verán afectados? ¿Por qué?
 Si hacemos esto, se verán afectados los elementos 1 y 3 de la lista. El segundo no se ve afectado.

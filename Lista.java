@@ -1,55 +1,34 @@
-public class Lista {
-    
-    private class Nodo {
-        Persona persona;
-        Nodo siguiente;
+class Lista {
+    private NodoA primero;
 
-        
-        public Nodo(Persona persona) {
-            this.persona = persona;
-            this.siguiente = null;
-        }
+    public Lista(){
+        this.primero = null;
     }
 
-    private Nodo cabeza; 
-
-    
-    public Lista() {
-        this.cabeza = null;
-    }
-
-    
     public void insertarPersona(Persona persona) {
-        Nodo nuevo = new Nodo(persona);
-
-        if (cabeza == null) {
-            
-            cabeza = nuevo;
-        } else {
-            
-            Nodo actual = cabeza;
-            while (actual.siguiente != null) {
-                actual = actual.siguiente;
-            }
-            actual.siguiente = nuevo;
-        }
+        NodoA nuevo = new NodoA(persona, primero);
+        primero = nuevo;
     }
 
-    
-    public Persona obtenerPersona(int index) {
-        int contador = 0;
-        Nodo actual = cabeza;
-
-        
+    public boolean contiene(Persona persona) {
+        NodoA actual = primero;
         while (actual != null) {
-            if (contador == index) {
-                return actual.persona;
+            if (actual.getPersona().getDni().equals(persona.getDni())) {
+                return true;
             }
-            contador++;
-            actual = actual.siguiente;
+            actual = actual.getSiguiente();
         }
+        return false;
+    }
 
-        
-        throw new IndexOutOfBoundsException("Índice fuera de rango: " + index);
+    public Persona obtenerPersona(String dni) {
+        NodoA actual = primero;
+        while (actual != null) {
+            if (actual.getPersona().getDni().equals(dni)) {
+                return actual.getPersona();
+            }
+            actual = actual.getSiguiente();
+        }
+        return null;
     }
 }
