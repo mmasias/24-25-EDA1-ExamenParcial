@@ -24,7 +24,7 @@ que genera un nuevo objeto en memoria con los mismos atributos que manuel, pero 
 
 Para justificar estas respuestas, he decidido mostrar los objetos creados y verificar si manuel, copia y referencia son el mismo objeto:
 
-https://github.com/alejandrofondo/24-25-EDA1-ExamenParcial/blob/8064a7cc49eedbb6541f8d353854c72ca0e40727/Respuesta3_FondoJoseAlejandro/Principal.java#L12
+https://github.com/alejandrofondo/24-25-EDA1-ExamenParcial/blob/c78d46656aba5b687bff062e24c905d3ab300e86/entregas/fondoAlejandro/respuesta3/Principal.java#L12
 
 ## *b)*
 ```java
@@ -46,4 +46,4 @@ no se vería afectado porque es un objeto independiente clonado en memoria.
 
 Para justificar los elementos de la lista afectados, muestro los objetos después de modificar manuel mediante .setNombre para verificar el estado de los mismos:
 
-https://github.com/alejandrofondo/24-25-EDA1-ExamenParcial/blob/8064a7cc49eedbb6541f8d353854c72ca0e40727/Respuesta3_FondoJoseAlejandro/Principal.java#L21
+https://github.com/alejandrofondo/24-25-EDA1-ExamenParcial/blob/c78d46656aba5b687bff062e24c905d3ab300e86/entregas/fondoAlejandro/respuesta3/Principal.java#L22
