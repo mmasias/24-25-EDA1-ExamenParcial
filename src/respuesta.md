@@ -46,15 +46,16 @@ A) En este caso, la cantidad de objetos dependerá de la implementación del nod
         Persona copia = new Persona(manuel);
         Persona referencia = manuel;
 ```
+`referencia` simplemente apunta a `manuel`, por lo que no se toma como un nuevo objeto.
 
-- Si se utiliza la implementación de **Nodo A**, habrá un total de 5 objetos `Persona` en memoria.
+- Si se utiliza la implementación de **Nodo A**, habrá un total de 5 objetos `Persona` en memoria. Esto se debe a que por cada insertación que se haga, se crea una copia de la Persona (en total se hacen 3 insertaciones).
 
     <img src="../images/depuradorA.png"/>
 
 
   El código se encuentra en: [CasoA.java](./CasoA.java)
 
-- Si se utiliza la implementación de **Nodo B**, habrá un total de 2 objetos `Persona` en memoria.
+- Si se utiliza la implementación de **Nodo B**, habrá un total de 2 objetos `Persona` en memoria. Esto se debe a que se utiliza la misma referencia del parametro persona, por lo que nos quedaremos con el minimo de personas creadas antes de insertar a la lista (los cuales son 2). 
 
     <img src="../images/depuradorB.png"/>
 
