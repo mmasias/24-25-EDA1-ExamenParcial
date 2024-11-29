@@ -39,3 +39,7 @@ Esto se debe a que:
 - Los cambios en el objeto de `manuel` no afectan al objeto de `copia`
 
 En resumen: la modificación afectará a dos elementos de la lista (primero y tercero) porque ambos son referencias al mismo objeto en memoria, mientras que el segundo elemento (copia) permanecerá sin cambios al ser un objeto independiente.
+
+| Diagrama | Código Fuente |
+|----------|---------------|
+| ![Actores](Pregunta3\DiagramaExplicativo.svg) | [Ver código](Pregunta3\DiagramaExplicativo.puml) |
