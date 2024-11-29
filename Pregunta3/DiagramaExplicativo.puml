@@ -1,0 +1,34 @@
+@startuml
+class Principal {
+        +void main(String[] args)
+    }
+    
+    class Persona1 {
+        -nombre: String = "Manuel"
+        -dni: String = "1234"
+    }
+    
+    class Persona2 {
+        -nombre: String = "Manuel"
+        -dni: String = "1234"
+    }
+    
+    class Referencias {
+        +manuel: Persona
+        +copia: Persona
+        +referencia: Persona
+    }
+    
+    Principal --> Referencias : contiene
+    Referencias --> Persona1 : manuel
+    Referencias --> Persona1 : referencia
+    Referencias --> Persona2 : copia
+    
+    note "Objeto Original" as N1
+    note "Objeto Copia (independiente)" as N2
+    note "Variables en memoria" as N3
+    
+    Persona1 .. N1
+    Persona2 .. N2
+    Referencias .. N3
+@enduml
