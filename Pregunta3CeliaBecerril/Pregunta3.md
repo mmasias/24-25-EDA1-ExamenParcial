@@ -38,4 +38,16 @@ Por lo tanto:
 
 ---
 
+# Diagramas de Implementación
+
+| Diagrama | Código Fuente |
+|----------|---------------|
+| ![Diagrama implementación A](https://raw.githubusercontent.com/celiabecerril/24-25-EDA1-ExamenParcial/main/Pregunta3CeliaBecerril/DiagramaA.svg) | [Ver código A](https://github.com/celiabecerril/24-25-EDA1-ExamenParcial/blob/main/Pregunta3CeliaBecerril/diagramaA.puml) |
+| ![Diagrama implementación B](https://raw.githubusercontent.com/celiabecerril/24-25-EDA1-ExamenParcial/main/Pregunta3CeliaBecerril/DiagramaB.svg) | [Ver código B](https://github.com/celiabecerril/24-25-EDA1-ExamenParcial/blob/main/Pregunta3CeliaBecerril/diagramaB.puml) |
+
+# Código de Implementaciones
+
+- [Código implementación A](https://github.com/celiabecerril/24-25-EDA1-ExamenParcial/tree/main/Pregunta3CeliaBecerril/ImplementacionA)
+- [Código implementación B](https://github.com/celiabecerril/24-25-EDA1-ExamenParcial/tree/main/Pregunta3CeliaBecerril/ImplementacionB)
+
 
