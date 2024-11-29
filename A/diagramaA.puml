@@ -1,0 +1,39 @@
+@startuml
+
+class Principal {
+    + main(String[] args)
+}
+
+class Persona {
+    - String nombre
+    - String dni
+    + Persona(String nombre, String dni)
+    + Persona(Persona persona)
+    + String getDni()
+    + String getNombre()
+}
+
+class Nodo {
+    - Persona persona
+    - Nodo siguiente
+    + Nodo(Persona persona, Nodo siguiente)
+    + Persona getPersona()
+    + Nodo getSiguiente()
+}
+
+class Lista {
+    - Nodo primero
+    + Lista()
+    + void insertarPersona(Persona persona)
+    + boolean contiene(Persona persona)
+    + Persona obtenerPersona(String dni)
+}
+
+' Relaciones
+Principal --> Persona : "crea y usa"
+Principal --> Lista : "crea y usa"
+Lista "1" --> "0..*" Nodo : "contiene"
+Nodo "1" --> "1" Persona : "contiene y crea"
+Nodo "0..*" --> "1" Nodo : "apunta a"
+
+@enduml
