@@ -1,3 +1,4 @@
+package Implementacion_b;
 public class Persona {
     private String nombre;
     private String dni;

@@ -1,4 +1,5 @@
-class Lista {
+package Implementacion_b;
+public class Lista {
     private Nodo primero;
     
     public void insertarPersona(Persona persona) {

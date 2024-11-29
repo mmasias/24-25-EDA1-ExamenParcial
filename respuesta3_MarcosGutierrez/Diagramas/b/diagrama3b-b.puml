@@ -1,0 +1,40 @@
+@startuml
+class Lista {
+    +insertarPersona(persona: Persona)
+    +contiene(persona: Persona): boolean
+    +obtenerPersona(dni: String): Persona
+}
+
+class Nodo {
+    -persona: Persona
+    -siguiente: Nodo
+    +getPersona(): Persona
+    +getSiguiente(): Nodo
+}
+
+class Persona {
+    -nombre: String
+    -dni: String
+    +getNombre(): String
+    +getDni(): String
+    +setNombre(nombre: String): void
+}
+
+Usuario -> Lista : insertarPersona(manuel)
+Usuario -> Lista : insertarPersona(copia)
+Usuario -> Lista : insertarPersona(referencia)
+
+' Implementación B: Asigna referencia directa de persona en Nodo
+Nodo -> Persona : persona = persona (sin copia)
+
+' Cuando se cambia el nombre de manuel
+Usuario -> Persona : manuel.setNombre("Manuel Antonio")
+
+' Explicación del cambio en la Implementación B
+note left of Nodo
+    En la Implementación B, como el Nodo guarda
+    la referencia directa del objeto, el cambio
+    afectará a todos los nodos que compartan la misma
+    referencia (manuel y referencia), pero no a la copia.
+end note
+@enduml

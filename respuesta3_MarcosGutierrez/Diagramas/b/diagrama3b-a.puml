@@ -1,0 +1,40 @@
+@startuml
+class Lista {
+    +insertarPersona(persona: Persona)
+    +contiene(persona: Persona): boolean
+    +obtenerPersona(dni: String): Persona
+}
+
+class Nodo {
+    -persona: Persona
+    -siguiente: Nodo
+    +getPersona(): Persona
+    +getSiguiente(): Nodo
+}
+
+class Persona {
+    -nombre: String
+    -dni: String
+    +getNombre(): String
+    +getDni(): String
+    +setNombre(nombre: String): void
+}
+
+Usuario -> Lista : insertarPersona(manuel)
+Usuario -> Lista : insertarPersona(copia)
+Usuario -> Lista : insertarPersona(referencia)
+
+' Implementación A: Crea copia superficial de persona en Nodo
+Nodo -> Persona : new Persona(persona.getNombre(), persona.getDni())
+
+' Cuando se cambia el nombre de manuel
+Usuario -> Persona : manuel.setNombre("Manuel Antonio")
+
+' Explicación del cambio en la Implementación A
+note right of Nodo
+    En la Implementación A, como el Nodo contiene una
+    copia de la persona, solo el nodo de
+    "manuel" y "referencia" (que apunta al mismo objeto)
+    se verán afectados.
+end note
+@enduml

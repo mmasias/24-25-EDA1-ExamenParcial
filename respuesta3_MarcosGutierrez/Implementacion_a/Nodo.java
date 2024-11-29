@@ -1,4 +1,5 @@
-class Nodo {
+package Implementacion_a;
+public class Nodo {
     private Persona persona;
     private Nodo siguiente;
     

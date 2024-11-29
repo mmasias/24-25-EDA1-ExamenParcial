@@ -1,3 +1,4 @@
+package Implementacion_a;
 public class Principal {
     public static void main(String[] args) {
         Persona manuel = new Persona("Manuel", "1234");
@@ -6,6 +7,7 @@ public class Principal {
         
         Lista lista = new Lista();
         lista.insertarPersona(manuel);
+        System.out.println();
         lista.insertarPersona(copia);
         lista.insertarPersona(referencia);
     }

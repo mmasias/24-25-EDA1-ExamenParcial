@@ -1,0 +1,40 @@
+@startuml
+title Justificación de objetos Persona en memoria
+
+class Persona {
+    - String nombre
+    - String dni
+}
+
+class Principal {
+    main()
+}
+
+class Lista {
+    - Nodo primero
+    + insertarPersona(persona: Persona)
+    + contiene(persona: Persona): boolean
+    + obtenerPersona(dni: String): Persona
+}
+
+class Nodo {
+    - Persona persona
+    - Nodo siguiente
+    + getSiguiente(): Nodo
+    + getPersona(): Persona
+}
+
+
+Principal --> Persona : "manuel: Persona('Manuel', '1234')"
+Principal --> Persona : "copia: Persona(manuel)"
+Principal --> Persona : "referencia: manuel"
+Principal --> Lista : "lista"
+Lista --> Nodo : "primero"
+Nodo --> Persona : "persona"
+Nodo --> Nodo : "siguiente"
+
+note "manuel, copia y referencia apuntan al mismo objeto base ('manuel') o a una copia profunda." as N1
+note "Lista contiene nodos con referencias al mismo objeto o copias, pero todas se basan en solo dos instancias de Persona." as N2
+N1 --> Persona
+N2 --> Nodo
+@enduml
