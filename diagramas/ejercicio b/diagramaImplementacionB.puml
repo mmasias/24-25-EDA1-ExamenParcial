@@ -1,0 +1,37 @@
+@startuml
+
+class Persona {
+    - String nombre
+    - String dni
+    + Persona(String nombre, String dni)
+    + Persona(Persona persona)
+    + setNombre(String nombre)
+}
+
+class Nodo {
+    - Persona persona
+    - Nodo siguiente
+    + Nodo(Persona persona)
+    + getPersona() : Persona
+    + getSiguiente() : Nodo
+    + setSiguiente(Nodo siguiente)
+}
+
+class Lista {
+    - Nodo cabeza
+    + Lista()
+    + insertarPersona(Persona persona)
+    + imprimirLista()
+}
+
+class Principal {
+    + main(String[] args)
+}
+
+Nodo "1" --> "1" Persona : contiene
+Nodo "1" --> "1" Nodo : siguiente
+Lista "1" --> "*" Nodo : contiene
+Principal --> Persona : usa
+Principal --> Lista : usa
+
+@enduml
