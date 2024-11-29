@@ -1,0 +1,48 @@
+@startuml
+object "manuel" as Manuel
+    object "copia" as Copia
+    object "referencia" as Referencia
+    object "lista" as Lista
+
+    object "Instancia de persona 1" as Persona1 {
+        nombre = "Manuel"
+        dni = "1234"
+    }
+
+    object "Instancia de persona 2" as Persona2 {
+        nombre = "Manuel"
+        dni = "1234"
+    }
+
+    object "Lista de instancias de personas" as ListaInstance {
+        personas
+    }
+
+    object "Instancia de nodo" as Nodo1 {
+        persona
+        siguiente = Nodo2
+    }
+
+    object "Instancia de nodo" as Nodo2 {
+        persona
+        siguiente = Nodo3
+    }
+
+    object "Instancia de nodo" as Nodo3 {
+        persona
+        siguiente = null
+    }
+
+
+Manuel --> Persona1
+Copia --> Persona2
+Referencia --> Persona1
+Lista --> ListaInstance
+
+ListaInstance --> Nodo1
+Nodo1 --> Nodo2
+Nodo2 --> Nodo3
+Nodo1 --> Persona1
+Nodo2 --> Persona2
+Nodo3 --> Persona1
+@enduml

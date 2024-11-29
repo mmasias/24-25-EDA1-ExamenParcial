@@ -1,3 +1,7 @@
+### 🚨 IMPORTANTE:
+
+En la carpeta [documentos](./documentos/README.md) se encuentra la pregunta 3 respondida de forma correcta
+
 # 24-25-EDA1-ExamenParcial
 
 ## Pregunta 1: análisis de implementaciones
@@ -10,7 +14,7 @@ Observe los siguientes fragmentos de código que implementan un nodo para una li
 class Nodo {
     private Persona persona;
     private Nodo siguiente;
-    
+
     public Nodo(Persona persona, Nodo siguiente) {
         this.persona = new Persona(persona.getNombre(), persona.getDni());
         this.siguiente = siguiente;
@@ -24,7 +28,7 @@ class Nodo {
 class Nodo {
     private Persona persona;
     private Nodo siguiente;
-    
+
     public Nodo(Persona persona, Nodo siguiente) {
         this.persona = persona;
         this.siguiente = siguiente;
@@ -45,12 +49,12 @@ Considere este código:
 ```java
 class Lista {
     private Nodo primero;
-    
+
     public void insertarPersona(Persona persona) {
         Nodo nuevo = new Nodo(persona, primero);
         primero = nuevo;
     }
-    
+
     public boolean contiene(Persona persona) {
         Nodo actual = primero;
         while (actual != null) {
@@ -61,7 +65,7 @@ class Lista {
         }
         return false;
     }
-    
+
     public Persona obtenerPersona(String dni) {
         Nodo actual = primero;
         while (actual != null) {
@@ -84,6 +88,7 @@ lista.insertarPersona(juan);
 Persona personaEncontrada = lista.obtenerPersona("1234");
 personaEncontrada.setNombre("Juan Manuel");
 ```
+
 ¿Qué nombre tendrá la persona almacenada en la lista? ¿Por qué?
 
 b) ¿Qué sucedería si modificamos:
@@ -102,12 +107,12 @@ Analice este código:
 public class Persona {
     private String nombre;
     private String dni;
-    
+
     public Persona(String nombre, String dni) {
         this.nombre = nombre;
         this.dni = dni;
     }
-    
+
     public Persona(Persona persona) {
         this.nombre = persona.nombre;
         this.dni = persona.dni;
@@ -119,7 +124,7 @@ public class Principal {
         Persona manuel = new Persona("Manuel", "1234");
         Persona copia = new Persona(manuel);
         Persona referencia = manuel;
-        
+
         Lista lista = new Lista();
         lista.insertarPersona(manuel);
         lista.insertarPersona(copia);
@@ -150,13 +155,13 @@ Dado este fragmento:
 ```java
 public class GestorPersonas {
     private Lista lista;
-    
+
     public void agregarPersona(Persona persona) {
         if (!lista.contiene(persona)) {
             lista.insertarPersona(persona);
         }
     }
-    
+
     public Persona buscarPersona(String dni) {
         return lista.obtenerPersona(dni);
     }
