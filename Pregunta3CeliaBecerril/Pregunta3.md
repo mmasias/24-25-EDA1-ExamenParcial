@@ -38,7 +38,8 @@ Si `copia` fuera una referencia al mismo objeto que `manuel` (por ejemplo, si ha
 public void setNombre(String nombre) {
     this.nombre = nombre;
 }
+````
 
 | Diagrama | Código Fuente |
 |----------|---------------|
-| ![Actores]() | [Ver código]() |
+| ![Actores](https://github.com/celiabecerril/24-25-EDA1-ExamenParcial/blob/main/Pregunta3CeliaBecerril/diagrama.svg) | [Ver código](https://github.com/celiabecerril/24-25-EDA1-ExamenParcial/blob/main/Pregunta3CeliaBecerril/diagrama.puml) |
