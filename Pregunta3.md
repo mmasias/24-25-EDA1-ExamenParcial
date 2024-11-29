@@ -63,3 +63,7 @@ El hash de manuel y referencia será el mismo, indicando que comparten el mismo 
 El hash de copia será diferente, indicando que es un objeto independiente, se puede demostrar ejecutando el siguiente código.
  [Enlace al código usando hash](./src/Main.java)
 
+**Diagrama UML del código**
+
+ ![](./images/diagrama.svg)
+
