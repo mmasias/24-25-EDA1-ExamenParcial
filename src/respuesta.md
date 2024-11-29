@@ -50,12 +50,15 @@ a) En este caso, la cantidad de objetos dependerá de la implementación del nod
 - Si se utiliza la implementación de **Nodo A**, habrá un total de 5 objetos `Persona` en memoria.
 
   - [Depuración A](../images/depuradorA.png)
+    <img src="../images/depuradorA.png"/>
+
 
   El código se encuentra en: [CasoA.java](./CasoA.java)
 
 - Si se utiliza la implementación de **Nodo B**, habrá un total de 2 objetos `Persona` en memoria.
 
   - [Depuración B](../images/depuradorB.png)
+    <img src="../images/depuradorB.png"/>
 
   El código se encuentra en: [CasoB.java](./CasoB.java)
 
