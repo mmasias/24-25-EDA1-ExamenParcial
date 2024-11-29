@@ -23,4 +23,12 @@ Esto es debido a que en un principio se crean los dos mismos objetos que en un p
 
 ### b)
 
+Si la clase nodo corresponde a la implementación A, ningún elemento de la lista se verá afectado por este cambio en `manuel`, ya que:
+Cuando se inserta manuel en la lista, el nodo crea una nueva instancia de Persona con los mismos valores que manuel. Esa nueva instancia es independiente de la original, luego da igual que modifiques el objeto después.
+Sin emabrgo el objeto original `manuel` si que se verá afectado.
+
+<br>
+
+Por otro lado, si la clase `Nodo` correspondiese a la implementación B, los elementos `manuel` y `referencia` se verían alterados ya que, aunque `copia` haya sido creada a partir de `manuel` es un objeto independiente, mientras que `copia` no es un objeto en sí, tan solo es un puntero que referencia a `manuel`.
+
 
