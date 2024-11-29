@@ -50,3 +50,7 @@ manuel.setNombre("Manuel Antonio");
 ```
 No habría ningún elemento de la lista que se vea afectado ya que al insertar manuel en la lista, el nodo establece una nueva instancia Persona que posee los valores iniciales de manuel y esa instancia es independiente de la original, por lo que las modificaciones que pueda sufrir el objeto manuel serán despreciadas.
 A pesar de ello, el objeto original manuel sí se verá afectado por la modificación de estado.
+
+Para justificar que los elementos de la lista no han sido afectados, muestro los objetos después de modificar manuel mediante .setNombre para verificar el estado de los mismos:
+
+https://github.com/alejandrofondo/24-25-EDA1-ExamenParcial/blob/4cbf2a79a613fde5e2e6151aee26421ba2f38bbc/entregas/fondoAlejandro/respuesta3/implementacionA/Principal.java#L31

@@ -14,6 +14,10 @@ public class Principal {
         lista.insertarPersona(manuel);
         lista.insertarPersona(copia);
         lista.insertarPersona(referencia);
+
+        System.out.println("\n¿'manuel' y 'copia' son el mismo objeto?: " + (manuel == copia));
+        System.out.println("¿'manuel' y 'referencia' son el mismo objeto?: " + (manuel == referencia));
+        System.out.println("¿'copia' y 'referencia' son el mismo objeto?: " + (copia == referencia));
         
         System.out.println("\nContenido de la lista después de insertar:");
         lista.mostrarPersonas();
