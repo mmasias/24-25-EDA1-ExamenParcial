@@ -260,12 +260,18 @@ Nodo B
 
 b) Si hacemos `manuel.setNombre("Manuel Antonio")`, ¿qué elementos de la lista se verán afectados? ¿Por qué?
 
-| **Aspecto**          | **Nodo A (manuel y referencia)**   | **Nodo B (copia)**                  |
-|-----------------------|------------------------------------|-------------------------------------|
-| **Ubicación en memoria** | Mismo objeto (comparten dirección) | Objetos distintos (direcciones diferentes) |
-| **Efecto de cambios**    | Afecta a ambas referencias            | No afecta, son independientes          |
-| **Relación**             | Referencias al mismo objeto           | Copia duplicada del objeto             |
-| **Dependencia**          | Totalmente dependientes               | Totalmente independientes              |
+Si ejecutamos `manuel.setNombre("Manuel Antonio")`, los elementos de la lista que se verán afectados dependen de su relación con `manuel`:
+
+- **Nodo A**: Incluye los objetos `manuel` y `referencia`. Ambos apuntan al mismo objeto en memoria, por lo que cualquier cambio realizado a través de `manuel` también afectará a `referencia`.
+- **Nodo B**: Incluye el objeto `copia`, que fue creado como una copia independiente utilizando un constructor de copia. Este objeto es completamente autónomo y no refleja los cambios realizados en `manuel`, ya que ocupa una dirección de memoria diferente.
+
+### Comparativa entre Nodo A y Nodo B
+
+| **Aspecto**             | **Nodo A (`manuel` y `referencia`)** | **Nodo B (`copia`)**               |
+|--------------------------|--------------------------------------|------------------------------------|
+| **Ubicación en memoria** | Mismo objeto (comparten dirección)   | Objeto distinto (dirección única)  |
+| **Efecto de cambios**    | Refleja el cambio                   | No refleja el cambio              |
+| **Relación**             | Referencias al mismo objeto          | Copia independiente               |
 
 
 ## Pregunta 4: diseño y optimización
