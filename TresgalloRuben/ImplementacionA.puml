@@ -1,0 +1,41 @@
+@startuml
+title Implementación A: Creación de copias de Persona en cada nodo
+
+class Persona {
+    - String nombre
+    - String dni
+}
+
+class Nodo {
+    - Persona persona
+    - Nodo siguiente
+    + Nodo(Persona persona, Nodo siguiente)
+}
+
+class Lista {
+    - Nodo cabeza
+    + insertarPersona(Persona p)
+}
+
+Persona "1" *--> "1 copia por nodo" Nodo : contiene
+Lista "1" o--> "1..*" Nodo : administra
+
+object manuel {
+    nombre = "Manuel"
+    dni = "1234"
+}
+object copia {
+    nombre = "Manuel"
+    dni = "1234"
+}
+object referencia {
+    nombre = "Manuel"
+    dni = "1234"
+}
+
+manuel --o Nodo : copia creada
+copia --o Nodo : copia creada
+referencia --o Nodo : copia creada
+
+Nodo --> Nodo : siguiente nodo
+@enduml
