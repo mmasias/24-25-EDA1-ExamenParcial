@@ -273,6 +273,12 @@ Si ejecutamos `manuel.setNombre("Manuel Antonio")`, los elementos de la lista qu
 | **Efecto de cambios**    | Refleja el cambio                   | No refleja el cambio              |
 | **Relación**             | Referencias al mismo objeto          | Copia independiente               |
 
+Es decir que dependiendo del nodo se veria afectado:
+
+En el nodo A afectaria persona manuel y referencia.
+
+En el nodo B afectaria a referencia y manuel  y a insertarPersona (manuel) y insertarPersona(referencia)
+
 
 ## Pregunta 4: diseño y optimización
 
