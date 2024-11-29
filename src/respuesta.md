@@ -64,9 +64,9 @@ B) Nuevamente depende de la implementación, como se vio en la respuesta A el co
 
 - Depuración del caso "A"
 
-    <img src="../images/depuradorB_caseA.png"/>
+    <img src="../images/depuradorB_casoA.png"/>
 
 - Depuración del caso "B"
 
-    <img src="../images/depuradorB_caseB.png"/>
+    <img src="../images/depuradorB_casoB.png"/>
 
