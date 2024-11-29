@@ -23,6 +23,8 @@ public class Nodo {
 }
 ```
 
+![Diagrama UML](Diagramas/diagramaImplementacionA.svg)
+
 ## Nodo b:
 ```java
 public class Nodo {
@@ -43,6 +45,8 @@ public class Nodo {
     }
 }
 ```
+
+![Diagrama UML](Diagramas/diagramaImplementacionB.svg)
 
 ## a)
 #### Implementación a
