@@ -9,12 +9,7 @@ En cambio, si la clase Nodo siguiera la implementación B, solo existirían dos 
 Esto se debe a que inicialmente se crean los mismos dos objetos: manuel y copia. Al añadirlos a la lista, esta genera nodos utilizando el constructor de la clase Nodo. Sin embargo, a diferencia de la implementación A, el constructor de la implementación B no crea nuevas instancias de la clase Persona, sino que simplemente almacena la referencia al objeto recibido como parámetro, evitando la creación de copias adicionales.
 
 ## b) Si hacemos `manuel.setNombre("Manuel Antonio")`, ¿qué elementos de la lista se verán afectados? ¿Por qué?
-Si hacemos esto, se verán afectados los elementos 1 y 3 de la lista. El segundo no se ve afectado.
+Si la clase Nodo sigue la implementación A, cualquier cambio realizado posteriormente en 'manuel' no tendrá impacto en los elementos de la lista. Esto se debe a que, al insertar 'manuel' en la lista, el Nodo genera una nueva instancia de la clase Persona, copiando los valores de 'manuel'. Dicha copia es completamente independiente del objeto original, por lo que las modificaciones posteriores a manuel no alterarán la copia almacenada en la lista. 
+Sin embargo, cualquier cambio aplicado directamente al objeto original 'manuel' seguirá afectándolo, ya que dicho objeto conserva su propia identidad y no está vinculado a las copias creadas por los nodos.
 
-En el primer elemento es el mismo objeto que está referenciado por manuel. Cuando modificamos el atributo nombre del objeto con setNombre, este cambio lo podremos ver automáticamente en el primer elemento porque apunta al mismo objeto en memoria.
-
-El segundo elemento de la lista  no se ve afectado porque ha sido creado con el constructor de copia new Persona(manuel). Lo que hace este constructor es es crear un nuevo objeto en memoria con los mismos valores iniciales (nombre y dni), pero es independiente del objeto referenciado por manuel,. Es por eso que este elemento no se ve afectado.
-
-El tercer elemento de la lista es una referencia directa al mismo objeto al que está apuntando manuel, que es a través de referencia. Al apuntar al mismo objeto, cualquier cambio que se realice en manuel se refleja automáticamente en el tercer elemento.
-
-
+Por otro lado, si la clase Nodo estuviera basada en la implementación B, tanto el objeto original manuel como los elementos manuel y referencia en la lista se verían afectados. Esto ocurre porque, aunque copia se haya generado como una nueva instancia independiente basada en manuel, referencia no es un objeto autónomo, sino simplemente un puntero que señala al mismo objeto manuel. Por lo tanto, cualquier cambio realizado sobre manuel se reflejará automáticamente en referencia.
