@@ -31,10 +31,10 @@ public class Pregunta3 {
 
         private Persona[] personas;
         private int contador;
-        private static final int CAPACIDAD_INICIAL = 10;
+        private static final int Inicial = 5;
 
         public Lista() {
-            personas = new Persona[CAPACIDAD_INICIAL];
+            personas = new Persona[Inicial];
             contador = 0;
         }
 
