@@ -1,0 +1,27 @@
+@startuml ApartadoAImplementacionB
+
+class Referencia {
+    - nombre: "Manuel"
+    - edad: "1234"
+}
+
+class Manuel {
+    - nombre: "Manuel"
+    - edad: "1234"
+}
+
+class Persona {
+    - nombre: String
+    - dni: String
+}
+
+class Copia {
+    - nombre: "Manuel"
+    - edad: "1234"
+}
+
+Referencia --> Manuel
+Manuel --> Persona
+Copia --> Persona 
+
+@enduml
